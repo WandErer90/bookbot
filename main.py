@@ -1,10 +1,19 @@
 path = "books/frankenstein.txt"
 
-# print contents of file at path
+# read file from path
 
 def main (path):
     with open(path) as f:
         file_contents = f.read()
-        print(file_contents)
+        return file_contents
 
-main(path)
+# return word count from file
+
+def word_count(file_contents):
+    word_count = 0
+    words = main(file_contents).split()
+    for i in range(0,len(words) + 1):
+        word_count = i
+    print(word_count)
+
+word_count(path)
